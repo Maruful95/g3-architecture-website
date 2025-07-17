@@ -84,10 +84,6 @@ main > section{
     font-size: 2.8rem;
 }
 
-.nav-links{
-    
-}
-
 .nav-item{
     list-style: none;
 }
@@ -155,6 +151,46 @@ main > section{
 #quick-list{
     font-weight: 500;
 }
+                        /* features */
+
+#feature-section-title{
+    border-left: 5px solid #ff900e;
+    padding-left: 21px;
+}
+
+.features{
+    gap: 146px;
+}
+
+.featured-architect{
+    width: 100%;
+}
+
+.feature-card {
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    flex-wrap: 500;
+    margin-left: -92px;
+    margin-top: -125px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
 
 
 
@@ -196,17 +232,57 @@ main > section{
 
 
 
+/* sponsor related styles */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor-info h3{
+    margin-bottom: 24px;
+}
+
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 50px;
+}
+
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
+
+
+
+/* footer styles */
+footer{
+    background-color: #FFF4E7;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    max-width: 1440px;
+    padding: 38px;
+    margin:130px auto ;
+}
+
+
+
 
 /* responsive media query */
 
 @media screen and (max-width: 576px) {
     .navbar, 
     .nav-links,
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
     }
     .team-image-container,
-    .facts-container{
+    .facts-container,
+    .sponsor-companies
+    {
         grid-template-columns: repeat(1, 1fr);
     }
     .our-features{
@@ -216,14 +292,36 @@ main > section{
         justify-items: center;
         gap: 24px;
     }
+    .sponsor-companies{
+        justify-items: center;
+        gap: 50px;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 30px;
+    }
 }
+
+
 
 /* medium size device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    .teams{
+    .teams,
+    .features
+    {
         flex-direction: column;
     }
     .our-features{
         margin-left: 40px auto;
+    }
+    #experience-badge{
+        margin-left: 30px;
+    }
+    .sponsor-companies,
+    .facts-container
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
     }
 }
